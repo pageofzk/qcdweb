@@ -22,13 +22,10 @@
     <% if (price_txt) { %>
     <p class="special_tips"><%- price_txt %></p>
     <% } %>
-    <div class="userMsg"><%- from %> | <%- time.iso %></div>
+    <a href="<%- url %>"><div class="userMsg"><%- from %> | <%- time.iso %></div></a>
     <div class="detail_content">
         <div class="img_small_wrap">
-            <% if (buy_url) { %>
             <img src="<%- pic_left.url %>" alt="<%- title %>">
-            <a href="<%- buy_url %>"  title="直达链接" target="_blank" class="direct_link">直达链接 &gt;</a>
-            <% } %>
         </div>
         <%- content_html %></div>
     <!--share-->
@@ -39,7 +36,7 @@
     <!--share end-->
     <div class="worth_number"><i class="icons icon_logo42"><img src=""></i><b><%- good %></b>位认为赞！</div>
     <% if (buy_url) { %>
-    <a href="<%- buy_url %>"  title="直达链接" target="_blank" class="direct_link">直达链接 &gt;</a>
+    <a href="<%- buy_url %>"  title="去看看" target="_blank" class="direct_link">去看看 &gt;</a>
     <% } %>
     <div class="comments">
         <!-- 多说评论框 start -->
@@ -47,7 +44,7 @@
         <!-- 多说评论框 end -->
         <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
         <script type="text/javascript">
-            var duoshuoQuery = {short_name:"qsd"};
+            var duoshuoQuery = {short_name:"qicaidang"};
             (function() {
                 var ds = document.createElement('script');
                 ds.type = 'text/javascript';ds.async = true;
