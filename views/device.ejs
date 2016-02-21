@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://m.smzdm.com/p/6022538/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="applicable-device" content="mobile">
+    <title><%- title %></title>
+    <meta name="description" content="<%- title %>">
+    <meta name="keywords" content="<%- title %>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link href="/detail_files/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!--content_show end-->
+<!--content_show-->
+<article id="content_show" class="detail">
+    <h1><%- title %></h1>
+    <div class="userMsg"><%- type %></div>
+    <div class="detail_content">
+        <div class="img_small_wrap">
+            <img src="<%- pic_file.url %>" alt="<%- title %>">
+        </div>
+        <%- short_info %>
+        <div class="spces-box">
+            <h1 class="t-12 "> 详细参数:</h1>
+            <div class="more-slide show">
+                <table border="1" cellspacing="0" class="table-01">
+                    <colgroup>
+                        <col width="160">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <% for(var key in infos) {%>
+                    <tr >
+                        <th>
+                            <%- key %>
+                        </th>
+                        <td><span class="js-detail-col2" attr_id="7" union="0"> <%- infos[key] %></span></td>
+                    </tr>
+                    <% } %>
+                    </tbody></table>
+            </div>
+        </div>
+    </div>
+    <!--share-->
+    <a class="button_share">
+        <img class="icons icon_share" src="/images/icon_hand_frs_click.png"></i>
+        赞
+    </a>
+    <!--share end-->
+    <div class="comments">
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" data-thread-key="<%- objectId %>objectId" data-title="<%- title %>" data-url="<%- objectId %>"></div>
+        <!-- 多说评论框 end -->
+        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+        <script type="text/javascript">
+            var duoshuoQuery = {short_name:"qicaidang"};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0]
+                || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+        </script>
+        <!-- 多说公共JS代码 end -->
+    </div>
+
+</article>
+<!--content_show end-->
+
+
+
+
+</body></html>
