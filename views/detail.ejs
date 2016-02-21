@@ -25,7 +25,10 @@
     <a href="<%- url %>"><div class="userMsg"><%- from %> | <%- time.iso %></div></a>
     <div class="detail_content">
         <div class="img_small_wrap">
+            <% if (buy_url) { %>
             <img src="<%- pic_left.url %>" alt="<%- title %>">
+            <a href="<%- buy_url %>"  title="去看看" target="_blank" class="direct_link">去看看 &gt;</a>
+            <% } %>
         </div>
         <%- content_html %></div>
     <!--share-->
