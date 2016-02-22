@@ -41,6 +41,18 @@ app.use('/', routes);
 app.use('/content', content);
 app.use('/device', device);
 
+app.locals.rating = function(id, type, good) {
+  console.log("rating:" + id);
+  var post = AV.Object.createWithoutData(type, id);
+  post.increment('good');
+  post.save().then(function() {
+    // 保存成功
+  }, function(erro) {
+    // 失败
+  });
+  return good;
+}
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

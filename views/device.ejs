@@ -44,11 +44,12 @@
         </div>
     </div>
     <!--share-->
-    <a class="button_share">
+    <a class="button_share" onclick="<%- rating(objectId, "Lib", good) %>;">
         <img class="icons icon_share" src="/images/icon_hand_frs_click.png"></i>
         赞
     </a>
     <!--share end-->
+    <div class="worth_number"><i class="icons icon_logo42"><img src=""></i><b><%- good %></b>个赞！</div>
     <div class="comments">
         <!-- 多说评论框 start -->
         <div class="ds-thread" data-thread-key="<%- objectId %>objectId" data-title="<%- title %>" data-url="<%- objectId %>"></div>

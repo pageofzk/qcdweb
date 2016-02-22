@@ -32,12 +32,12 @@
         </div>
         <%- content_html %></div>
     <!--share-->
-    <a class="button_share">
+    <a class="button_share" onclick="<%- rating(objectId, "Post", good)%>">
         <img class="icons icon_share" src="/images/icon_hand_frs_click.png"></i>
         赞
     </a>
     <!--share end-->
-    <div class="worth_number"><i class="icons icon_logo42"><img src=""></i><b><%- good %></b>位认为赞！</div>
+    <div class="worth_number"><i class="icons icon_logo42"><img src=""></i><b><%- good %></b>个赞！</div>
     <% if (buy_url) { %>
     <a href="<%- buy_url %>"  title="去看看" target="_blank" class="direct_link">去看看 &gt;</a>
     <% } %>
