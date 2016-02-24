@@ -13,6 +13,7 @@ var users = require('./routes/users');
 
 var content = require('./routes/content');
 var device = require('./routes/device');
+var feedback = require('./routes/feedback');
 
 var app = express();
 
@@ -40,6 +41,7 @@ app.use('/', routes);
 //app.use('/users', users);
 app.use('/content', content);
 app.use('/device', device);
+app.use('/feedback', feedback);
 
 app.locals.rating = function(id, type, good) {
   console.log("rating:" + id);
