@@ -1,11 +1,125 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
+<!DOCTYPE html>
+<!-- saved from url=(0020)http://angularjs.cn/ -->
+<html ><head class="head_banner"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta name="applicable-device" content="mobile">
+    <title>器材党-<%- title %></title>
+    <meta name="description" content="器材党-<%- title %>">
+    <meta name="keywords" content="器材党-<%- title %>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link href="/stylesheets/index.css" rel="stylesheet" type="text/css">
+    <link href="/detail_files/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<h1><%= title %></h1>
-<h2><%= message %></h2>
-</body>
-</html>
+<header class="head_banner">
+    <h1 id="logo">器材党</h1>
+
+</header>
+<div class="pure-u-1">
+    <!-- ngView:  --><div id="main" ng-view="" class="ng-scope"><div class="pure-g-r wrap ng-scope"><div class="pure-u-2-3"><!-- ngInclude:  -->
+                <div class="panel ng-scope" ng-include="" src="parent.getTpl">
+                    <ul class="nav nav-tabs inner ng-scope">
+                        <li  class="active"><a href="http://angularjs.cn/latest" title="最新">最新</a></li>
+                        <li ><a href="/news" title="资讯">资讯</a></li>
+                        <li ><a href="/buy" title="剁手">剁手</a></li>
+                        <li ><a href="/lib" title="器材库">器材库</a></li>
+                    </ul>
+                    <!--<ul class="list-inline inner ng-scope">&lt;!&ndash; ngRepeat: tag in global.tagsList &ndash;&gt;-->
+                        <!--<li ng-repeat="tag in global.tagsList" class="ng-scope">-->
+                            <!--<a ng-href="/T03f" class="pure-button pure-button-xsmall info-bg ng-binding" href="http://angularjs.cn/T03f">JavaScript异步编程</a>-->
+                        <!--</li>&lt;!&ndash; end ngRepeat: tag in global.tagsList &ndash;&gt;-->
+                        <!--<li ng-repeat="tag in global.tagsList" class="ng-scope">-->
+                            <!--<a ng-href="/T01O" class="pure-button pure-button-xsmall info-bg ng-binding" href="http://angularjs.cn/T01O">websocket</a>-->
+                        <!--</li>&lt;!&ndash; end ngRepeat: tag in global.tagsList &ndash;&gt;<li ng-repeat="tag in global.tagsList" class="ng-scope">-->
+                            <!--<a ng-href="/T01w" class="pure-button pure-button-xsmall info-bg ng-binding" href="http://angularjs.cn/T01w">angular</a>-->
+                        <!--</li>&lt;!&ndash; end ngRepeat: tag in global.tagsList &ndash;&gt;<li>-->
+                            <!--<a href="http://angularjs.cn/tag" class="pure-button pure-button-xsmall">-->
+                            <!--更多</a>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+
+                    <ul class="list list_preferential" id="post_list_preferential">
+                        <% items.forEach(function(info){%>
+                        <li class="media">
+                            <a href="/content/<%- info.objectId%>" target="_blank" >
+                            <div class="image_wrap">
+                                <i class="icons icon_tags icon_tag_top"></i>
+                                <div class="image"><img src="<%- info.pic_left.url%>" alt="<%- info.title%>"/></div>
+                                <span class="s_icon"><%- info.doc_type%></span>
+                            </div>
+                            <address><span><%- info.time.iso%></span></address>
+
+                            <h2><%- info.title%></h2>
+                            </a>
+                            <div class="tips"><em><%- info.price_txt%></em><span><img class="icons icon_comment" src="/images/icon_hand_frs_click.png"></i><%- info.good%></span></div>
+                        </li>
+                        <% }) %>
+                    </ul>
+                </div>
+                <div gen-pagination="pagination">
+                    <ul class="pagination">
+                        <li class=""><a  title="上一页" href="/p<%- page-1 %>" >«</a></li><!-- ngRepeat: n in showPages track by $index -->
+                        <li class="active"><a ng-href="" title="第<%- page %>页" class="ng-binding">第<%- page %>页</a></li><!-- end ngRepeat: n in showPages track by $index -->
+                        <li class=""><a  title="下一页" href="/p<%- page+1 %>">»</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pure-u-1-3">
+                <div class="panel pure-hidden-phone">
+                    <div class="inner text-center">
+                        <img src="http://7xkfm0.com1.z0.glb.clouddn.com/nikon.jpg" alt="nikon">
+                        <div class="text-show text-left">nikon</div>
+                    </div>
+                </div>
+                <div class="panel pure-hidden-phone">
+                    <div class="inner text-center">
+                        <a href="" target="_blank"><img src="http://7xkfm0.com1.z0.glb.clouddn.com/canon.jpg" alt="canon"></a>
+                    </div>
+                </div>
+                <div class="panel pure-hidden-phone">
+                    <div class="inner text-center"><a href="" target="_blank">
+                            <img src="http://7xkfm0.com1.z0.glb.clouddn.com/fuji.jpg" alt="fuji"></a>
+                    </div>
+                </div>
+                <div class="panel pure-hidden-phone"><div class="inner text-center">
+                        <a href="" target="_blank">
+                            <img src="http://7xkfm0.com1.z0.glb.clouddn.com/olympus.jpg" alt="m43系统">
+                        </a>
+                        <div class="text-show text-left">m43系统
+                            <a href="" target="_blank"><i class="fa fa-weibo fa-lg"></i></a>
+                        </div>
+                        <div class="text-show">
+                            <a href="" target="_blank"><strong>穷三代</strong></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel site-link"><div class="panel-heading muted"><i class="fa fa-link"></i>友情链接</div><ul class="inner">
+                        <li><a href="https://www.teambition.com/" target="_blank"><img src="/images/icons.png" alt="Teambition"></a></li>
+                        <li><a href="https://coding.net/" target="_blank"><img src="/images/icons.png" alt="Coding.net"></a>
+                        </li>
+                        <li><a href="http://f2e.im/" target="_blank"><img src="/images/icons.png" alt="f2e.im"></a>
+                        </li>
+                        <li><a href="http://www.apicloud.com/" target="_blank"><img src="/images/icons.png" alt="APICloud"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pure-u-1 footer">
+    <div class="wrap">
+        <a class="muted ng-binding" href="">器材党</a> ©2016 Powered by
+        <a href="https://github.com/zensh/jsgen" target="_blank" class="ng-binding">zk<i class="fa fa-flag hot"></i></a>
+<span ng-show="!global.isPhone">
+&nbsp;<a class="muted ng-binding" href="" target="_blank"></a>
+&nbsp;<a class="muted ng-binding" href="" target="_blank"></a>
+&nbsp;<a class="muted ng-binding" href="" target="_blank"></a>
+&nbsp;<span class="ng-binding"></span>
+</span>
+    </div>
+</div>
+
+</body></html>
