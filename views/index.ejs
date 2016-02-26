@@ -13,18 +13,19 @@
     <link href="/detail_files/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<header class="head_banner">
-    <h1 id="logo">器材党</h1>
-
-</header>
+<a href="/">
+    <header class="head_banner">
+        <h1 id="logo">器材党</h1>
+    </header>
+</a>
 <div class="pure-u-1">
     <!-- ngView:  --><div id="main" ng-view="" class="ng-scope"><div class="pure-g-r wrap ng-scope"><div class="pure-u-2-3"><!-- ngInclude:  -->
                 <div class="panel ng-scope" ng-include="" src="parent.getTpl">
                     <ul class="nav nav-tabs inner ng-scope">
-                        <li  class="active"><a href="http://angularjs.cn/latest" title="最新">最新</a></li>
-                        <li ><a href="/news" title="资讯">资讯</a></li>
-                        <li ><a href="/buy" title="剁手">剁手</a></li>
-                        <li ><a href="/lib" title="器材库">器材库</a></li>
+                        <li <% if (doc_type == 'all'){%>class="active"<% }%>><a href="/" title="最新">最新</a></li>
+                        <li <% if (doc_type == 'news'){%>class="active"<% }%>><a href="/news" title="资讯">资讯</a></li>
+                        <li <% if (doc_type == 'buy'){%>class="active"<% }%>><a href="/buy" title="剁手">剁手</a></li>
+                        <!--<li <% if (doc_type == 'lib'){%>class="active"<% }%>><a href="/lib" title="器材库">器材库</a></li>-->
                     </ul>
                     <!--<ul class="list-inline inner ng-scope">&lt;!&ndash; ngRepeat: tag in global.tagsList &ndash;&gt;-->
                         <!--<li ng-repeat="tag in global.tagsList" class="ng-scope">-->
@@ -60,9 +61,9 @@
                 </div>
                 <div gen-pagination="pagination">
                     <ul class="pagination">
-                        <li class=""><a  title="上一页" href="/p<%- page-1 %>" >«</a></li><!-- ngRepeat: n in showPages track by $index -->
-                        <li class="active"><a ng-href="" title="第<%- page %>页" class="ng-binding">第<%- page %>页</a></li><!-- end ngRepeat: n in showPages track by $index -->
-                        <li class=""><a  title="下一页" href="/p<%- page+1 %>">»</a></li>
+                        <li class=""><a  title="上一页" href="/<% if (doc_type != 'all'){%><%-doc_type%>/<% } %>p<%- page-1 %>" >«</a></li><!-- ngRepeat: n in showPages track by $index -->
+                        <li class="active"><a ng-href="" title="第<%- page %>页" >第<%- page %>页</a></li><!-- end ngRepeat: n in showPages track by $index -->
+                        <li class=""><a  title="下一页" href="/<% if (doc_type != 'all'){%><%-doc_type%>/<% } %>p<%- page+1 %>">»</a></li>
                     </ul>
                 </div>
             </div>
@@ -70,39 +71,28 @@
                 <div class="panel pure-hidden-phone">
                     <div class="inner text-center">
                         <img src="http://7xkfm0.com1.z0.glb.clouddn.com/nikon.jpg" alt="nikon">
-                        <div class="text-show text-left">nikon</div>
+                        <div class="text-show text-left">我们爱摄影、爱器材；我们是骄傲的器材党！</div>
                     </div>
                 </div>
                 <div class="panel pure-hidden-phone">
                     <div class="inner text-center">
-                        <a href="" target="_blank"><img src="http://7xkfm0.com1.z0.glb.clouddn.com/canon.jpg" alt="canon"></a>
+                        <a href="" target=""><img src="http://7xkfm0.com1.z0.glb.clouddn.com/canon.jpg" alt="canon"></a>
                     </div>
                 </div>
                 <div class="panel pure-hidden-phone">
-                    <div class="inner text-center"><a href="" target="_blank">
+                    <div class="inner text-center"><a href="" target="">
                             <img src="http://7xkfm0.com1.z0.glb.clouddn.com/fuji.jpg" alt="fuji"></a>
                     </div>
                 </div>
                 <div class="panel pure-hidden-phone"><div class="inner text-center">
-                        <a href="" target="_blank">
+                        <a href="/feedback" target="">
                             <img src="http://7xkfm0.com1.z0.glb.clouddn.com/olympus.jpg" alt="m43系统">
+                            意见反馈
                         </a>
-                        <div class="text-show text-left">m43系统
-                            <a href="" target="_blank"><i class="fa fa-weibo fa-lg"></i></a>
-                        </div>
-                        <div class="text-show">
-                            <a href="" target="_blank"><strong>穷三代</strong></a>
-                        </div>
                     </div>
                 </div>
                 <div class="panel site-link"><div class="panel-heading muted"><i class="fa fa-link"></i>友情链接</div><ul class="inner">
-                        <li><a href="https://www.teambition.com/" target="_blank"><img src="/images/icons.png" alt="Teambition"></a></li>
-                        <li><a href="https://coding.net/" target="_blank"><img src="/images/icons.png" alt="Coding.net"></a>
-                        </li>
-                        <li><a href="http://f2e.im/" target="_blank"><img src="/images/icons.png" alt="f2e.im"></a>
-                        </li>
-                        <li><a href="http://www.apicloud.com/" target="_blank"><img src="/images/icons.png" alt="APICloud"></a>
-                        </li>
+                        <li><a href="http://www.qiongsandai.com/" target="_blank"><img src="http://7xkfm0.com1.z0.glb.clouddn.com/slogan.png?imageView2" alt="qiongsandai.com"></a></li>
                     </ul>
                 </div>
             </div>
@@ -112,7 +102,7 @@
 <div class="pure-u-1 footer">
     <div class="wrap">
         <a class="muted ng-binding" href="">器材党</a> ©2016 Powered by
-        <a href="https://github.com/zensh/jsgen" target="_blank" class="ng-binding">zk<i class="fa fa-flag hot"></i></a>
+        <a href="mailto:info@qicaidang.cn" target="_blank" class="ng-binding">zeka<i class="fa fa-flag hot"></i></a>
 <span ng-show="!global.isPhone">
 &nbsp;<a class="muted ng-binding" href="" target="_blank"></a>
 &nbsp;<a class="muted ng-binding" href="" target="_blank"></a>
