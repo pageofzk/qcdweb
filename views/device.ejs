@@ -65,7 +65,7 @@
         </div>
     </div>
     <!--share-->
-    <a class="button_share" onclick="<%- rating(objectId, "Lib", good) %>;">
+    <a class="button_share" onclick="<%- rating(objectId, "Lib", good)%>" href="" >
         <img class="icons icon_share" src="/images/icon_hand_frs_click.png"></i>
         赞
     </a>
@@ -94,6 +94,13 @@
 <!--content_show end-->
 
 
-
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
 
 </body></html>

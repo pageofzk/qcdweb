@@ -42,6 +42,9 @@
                         <li <% if (doc_type == 'news'){%>class="active"<% }%>><a href="/news" title="资讯">资讯</a></li>
                         <li <% if (doc_type == 'buy'){%>class="active"<% }%>><a href="/buy" title="剁手">剁手</a></li>
                         <!--<li <% if (doc_type == 'lib'){%>class="active"<% }%>><a href="/lib" title="器材库">器材库</a></li>-->
+                        <div class="pure-button-group right">
+                            <a href="https://www.pgyer.com/qicaid"  target="_blank" class="pure-button" title="器材党app" ><img class="icons icon_comment" src="/images/iconfont-app.png"/></a>
+                        </div>
                     </ul>
                     <!--<ul class="list-inline inner ng-scope">&lt;!&ndash; ngRepeat: tag in global.tagsList &ndash;&gt;-->
                         <!--<li ng-repeat="tag in global.tagsList" class="ng-scope">-->
@@ -70,7 +73,8 @@
 
                             <h2><%- info.title%></h2>
                             </a>
-                            <div class="tips"><em><%- info.price_txt%></em><span><img class="icons icon_comment" src="/images/icon_hand_frs_click.png"></i><%- info.good%></span></div>
+                            <div class="tips"><em><%- info.price_txt%></em><span>
+                                    <img class="icons icon_comment" src="/images/icon_hand_frs_click.png"></i><%- info.good%></span></div>
                         </li>
                         <% }) %>
                     </ul>
@@ -92,12 +96,12 @@
                 </div>
                 <div class="panel pure-hidden-phone">
                     <div class="inner text-center">
-                        <a href="" target=""><img src="http://7xkfm0.com1.z0.glb.clouddn.com/canon.jpg" alt="canon"></a>
+                        <a href="https://www.pgyer.com/qicaid"  target="_blank"><img src="http://7xkfm0.com1.z0.glb.clouddn.com/canon.jpg" alt="canon"><img class="icons icon_comment" src="/images/iconfont-app.png"/>器材党app(Android版)</a>
                     </div>
                 </div>
                 <div class="panel pure-hidden-phone">
-                    <div class="inner text-center"><a href="" target="">
-                            <img src="http://7xkfm0.com1.z0.glb.clouddn.com/fuji.jpg" alt="fuji"></a>
+                    <div class="inner text-center">
+                            <img src="http://7xkfm0.com1.z0.glb.clouddn.com/fuji.jpg" alt="fuji"><img class="icons icon_comment" src="/images/iconfont-app.png"/>器材党app(iOS版)
                     </div>
                 </div>
                 <div class="panel pure-hidden-phone"><div class="inner text-center">
@@ -108,7 +112,8 @@
                     </div>
                 </div>
                 <div class="panel site-link"><div class="panel-heading muted"><i class="fa fa-link"></i>友情链接</div><ul class="inner">
-                        <li><a href="http://www.qiongsandai.com/" target="_blank"><img src="http://7xkfm0.com1.z0.glb.clouddn.com/slogan.png?imageView2" alt="qiongsandai.com"></a></li>
+                        <li><a href="http://www.qiongsandai.com/" target="_blank">
+                                qiongsandai.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -118,14 +123,16 @@
 <div class="pure-u-1 footer">
     <div class="wrap">
         <a class="muted ng-binding" href="">器材党</a> ©2016 Powered by
-        <a href="mailto:info@qicaidang.cn" target="_blank" class="ng-binding">zeka<i class="fa fa-flag hot"></i></a>
-<span ng-show="!global.isPhone">
-&nbsp;<a class="muted ng-binding" href="" target="_blank"></a>
-&nbsp;<a class="muted ng-binding" href="" target="_blank"></a>
-&nbsp;<a class="muted ng-binding" href="" target="_blank"></a>
-&nbsp;<span class="ng-binding"></span>
-</span>
+        <a href="mailto:info@qicaidang.cn" target="_blank" class="ng-binding">zeka</a>
     </div>
 </div>
 
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
 </body></html>
