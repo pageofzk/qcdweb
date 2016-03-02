@@ -13,7 +13,7 @@ router.get('/p:page', function(req, res, next) {
     query.limit(pageNum);
     query.addDescending("time");
     query.find().then(function(results) {
-        obj.title =  '| 摄影器材党聚集地 | 最新摄影器材资讯，器材价格查询，降价推送';
+        obj.title =  '最新摄影器材资讯,价格-器材党官网-p' + page;
         obj.page = parseInt(page);
         obj.items = [];
         obj.doc_type = 'all';
@@ -38,7 +38,7 @@ router.get('/', function(req, res, next) {
     query.limit(pageNum);
     query.addDescending("time");
     query.find().then(function(results) {
-        obj.title =  '| 摄影器材党聚集地 | 最新摄影器材资讯，器材价格查询，降价推送'
+        obj.title =  '最新摄影器材资讯,价格-器材党官网'
         obj.page = 1;
         obj.items = [];
         obj.doc_type = 'all';
@@ -67,7 +67,7 @@ router.get('/news/p:page', function(req, res, next) {
     query.limit(pageNum);
     query.addDescending("time");
     query.find().then(function(results) {
-        obj.title =  '| 摄影器材党聚集地 | 最新摄影器材资讯'
+        obj.title =  '最新摄影器材资讯-器材党官网-p' + page
         obj.page = parseInt(page);
         obj.items = [];
         obj.doc_type = 'news';
@@ -92,7 +92,7 @@ router.get('/news', function(req, res, next) {
     query.limit(pageNum);
     query.addDescending("time");
     query.find().then(function(results) {
-        obj.title =  '| 摄影器材党聚集地 | 最新摄影器材资讯'
+        obj.title =  '最新摄影器材资讯-器材党官网'
         obj.page = 1;
         obj.items = [];
         obj.doc_type = 'news';
@@ -120,7 +120,7 @@ router.get('/buy/p:page', function(req, res, next) {
     query.limit(pageNum);
     query.addDescending("time");
     query.find().then(function(results) {
-        obj.title =  '| 摄影器材党聚集地 | 最新摄影器材价格查询，降价推送'
+        obj.title =  '最新摄影器材价格-器材党官网-p' + page
         obj.page = parseInt(page);
         obj.items = [];
         obj.doc_type = 'buy';
@@ -145,7 +145,7 @@ router.get('/buy', function(req, res, next) {
     query.limit(pageNum);
     query.addDescending("time");
     query.find().then(function(results) {
-        obj.title =  '| 摄影器材党聚集地 | 最新摄影器材价格查询，降价推送'
+        obj.title =  '最新摄影器材价格-器材党官网'
         obj.page = 1;
         obj.items = [];
         obj.doc_type = 'buy';
