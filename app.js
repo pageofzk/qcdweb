@@ -47,6 +47,7 @@ app.locals.rating = function(id, type, good) {
   console.log("rating:" + id);
   var post = AV.Object.createWithoutData(type, id);
   post.increment('good');
+  post.increment('click');
   post.save().then(function() {
     // 保存成功
   }, function(erro) {
