@@ -16,7 +16,7 @@ router.get('/:id', function(req, res, next) {
       obj.mall = "";
       obj.price_txt = "";
       obj.buy_url = "";
-      obj.content_html = obj.content_html.replace(/<script[\s\S]*?<\/script>/ig, "").replace(/<div[\s\S]*?<\/div>/ig, "");
+      obj.content_html = obj.content_html.replace(/<script[\s\S]*?<\/script>/ig, "");
     }
     //console.log(obj);
     return res.render('detail', obj);
