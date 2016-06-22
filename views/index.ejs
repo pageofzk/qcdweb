@@ -81,11 +81,11 @@
                 </div>
                 <div gen-pagination="pagination">
                     <ul class="pagination">
-                        <!--<li class=""><a  title="上一页" href="/<% if (doc_type != 'all'){%><%-doc_type%>/<% } %>p<%- page-1 %>" >«</a></li>-->
-                        <li class=""><a  title="上一页" href="javascript:void(0)" onClick="location.href='/<% if (doc_type != 'all'){%><%-doc_type%>/<% } %>p<%- page-1 %>'" >«</a></li>
+                        <li class=""><a  title="上一页" href="/<% if (doc_type != 'all'){%><%-doc_type%>/<% } %>p<%- page-1 %>" >«</a></li>
+                        <!--<li class=""><a  title="上一页" href="javascript:void(0)" onClick="location.href='/<% if (doc_type != 'all'){%><%-doc_type%>/<% } %>p<%- page-1 %>'" >«</a></li>-->
                         <li class="active"><a ng-href="" title="第<%- page %>页" >第<%- page %>页</a></li><!-- end ngRepeat: n in showPages track by $index -->
-                        <li class=""><a  title="下一页" href="javascript:void(0)" onClick="location.href='/<% if (doc_type != 'all'){%><%-doc_type%>/<% } %>p<%- page+1 %>'">»</a></li>
-                        <!--<li class=""><a  title="下一页" href="/<% if (doc_type != 'all'){%><%-doc_type%>/<% } %>p<%- page+1 %>">»</a></li>-->
+                        <!--<li class=""><a  title="下一页" href="javascript:void(0)" onClick="location.href='/<% if (doc_type != 'all'){%><%-doc_type%>/<% } %>p<%- page+1 %>'">»</a></li>-->
+                        <li class=""><a  title="下一页" href="/<% if (doc_type != 'all'){%><%-doc_type%>/<% } %>p<%- page+1 %>">»</a></li>
                     </ul>
                 </div>
             </div>
