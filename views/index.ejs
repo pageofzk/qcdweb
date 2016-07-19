@@ -66,7 +66,6 @@
                             <div class="image_wrap">
                                 <i class="icons icon_tags icon_tag_top"></i>
                                 
-                                <a href="http://www.qicaidang.cn/content/<%- info.objectId%>/" target="_blank" >
                                 <div class="image">
                                     <a href="http://www.qicaidang.cn/content/<%- info.objectId%>/" target="_blank" >
                                     <img src="<%- info.pic_left.url%>" alt="<%- info.title%>"/>
@@ -76,9 +75,12 @@
                                 <span class="s_icon"><%- info.doc_type%></span>
                             </div>
                             <address><span><%- info.time.iso%></span></address>
-                            <a href="http://www.qicaidang.cn/content/<%- info.objectId%>/" target="_blank" >
-                            <h2><%- info.title%></h2>
-                            </a>
+                            
+                            <h2>
+                                <a href="http://www.qicaidang.cn/content/<%- info.objectId%>/" target="_blank" >
+                                    <%- info.title%>
+                                </a>
+                            </h2>
                             <div class="tips"><em><%- info.price_txt%></em><span>
                                     <img class="icons icon_comment" src="/images/icon_hand_frs_click.png"></i><%- info.good%></span></div>
                         </li>
