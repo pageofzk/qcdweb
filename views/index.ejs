@@ -63,15 +63,20 @@
                     <ul class="list list_preferential" id="post_list_preferential">
                         <% items.forEach(function(info){%>
                         <li class="media">
-                            <a href="https://www.qicaidang.cn/content/<%- info.objectId%>/" target="_blank" >
                             <div class="image_wrap">
                                 <i class="icons icon_tags icon_tag_top"></i>
-                                <div class="image"><img src="<%- info.pic_left.url%>" alt="<%- info.title%>"/></div>
+                                
+                                <a href="http://www.qicaidang.cn/content/<%- info.objectId%>/" target="_blank" >
+                                <div class="image">
+                                    <a href="http://www.qicaidang.cn/content/<%- info.objectId%>/" target="_blank" >
+                                    <img src="<%- info.pic_left.url%>" alt="<%- info.title%>"/>
+                                    </a>
+                                </div>
+                                
                                 <span class="s_icon"><%- info.doc_type%></span>
                             </div>
-                            </a>
                             <address><span><%- info.time.iso%></span></address>
-                            <a href="https://www.qicaidang.cn/content/<%- info.objectId%>/" target="_blank" >
+                            <a href="http://www.qicaidang.cn/content/<%- info.objectId%>/" target="_blank" >
                             <h2><%- info.title%></h2>
                             </a>
                             <div class="tips"><em><%- info.price_txt%></em><span>
