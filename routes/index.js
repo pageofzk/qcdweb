@@ -20,7 +20,7 @@ router.get('/p:page', function(req, res, next) {
         if (results.length == 0) {
             res.render('error', {
               code: 404,
-              message: 'Page not found.,
+              message: 'Page not found',
               error: {}
             });
         }
@@ -82,7 +82,7 @@ router.get('/news/p:page', function(req, res, next) {
         if (results.length == 0) {
             res.render('error', {
               code: 404,
-              message: 'Page not found.,
+              message: 'Page not found',
               error: {}
             });
         }
@@ -142,7 +142,7 @@ router.get('/buy/p:page', function(req, res, next) {
         if (results.length == 0) {
             res.render('error', {
               code: 404,
-              message: 'Page not found.,
+              message: 'Page not found',
               error: {}
             });
         }
