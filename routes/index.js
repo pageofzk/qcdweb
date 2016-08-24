@@ -17,6 +17,13 @@ router.get('/p:page', function(req, res, next) {
         obj.page = parseInt(page);
         obj.items = [];
         obj.doc_type = 'all';
+        if (results.length == 0) {
+            res.render('error', {
+              code: 404,
+              message: 'Page not found.,
+              error: {}
+            });
+        }
         // 处理返回的结果数据
         for (var i = 0; i < results.length; i++) {
             var result = results[i].toJSON();
@@ -72,6 +79,13 @@ router.get('/news/p:page', function(req, res, next) {
         obj.items = [];
         obj.doc_type = 'news';
         // 处理返回的结果数据
+        if (results.length == 0) {
+            res.render('error', {
+              code: 404,
+              message: 'Page not found.,
+              error: {}
+            });
+        }
         for (var i = 0; i < results.length; i++) {
             var result = results[i].toJSON();
             // 标红内容
@@ -125,6 +139,13 @@ router.get('/buy/p:page', function(req, res, next) {
         obj.items = [];
         obj.doc_type = 'buy';
         // 处理返回的结果数据
+        if (results.length == 0) {
+            res.render('error', {
+              code: 404,
+              message: 'Page not found.,
+              error: {}
+            });
+        }
         for (var i = 0; i < results.length; i++) {
             var result = results[i].toJSON();
             // 标红内容
