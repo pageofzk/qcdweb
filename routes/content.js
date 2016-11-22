@@ -12,7 +12,7 @@ router.get('/:id', function(req, res, next) {
   var query = new AV.Query('Post');
   query.get(ID).then(function(post) {
     obj = post.toJSON();
-    if (!obj.mall) {
+    if (!obj.buy_url) {
       obj.mall = "";
       obj.price_txt = "";
       obj.buy_url = "";
