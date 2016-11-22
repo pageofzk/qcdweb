@@ -12,10 +12,11 @@ router.get('/:id', function(req, res, next) {
   var query = new AV.Query('Post');
   query.get(ID).then(function(post) {
     obj = post.toJSON();
-    if (!obj.mall) {
+    if (!obj.buy_url) {
       obj.mall = "";
       obj.price_txt = "";
-      obj.content_html = obj.content_html.replace(/<script[\s\S]*?<\/script>/ig, "");
+      obj.buy_url = "";
+      //obj.content_html = obj.content_html.replace(/<script[\s\S]*?<\/script>/ig, "");
     }
     //console.log(obj);
     return res.render('detail', obj);
