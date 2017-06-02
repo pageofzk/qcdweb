@@ -62,21 +62,16 @@
     <a href="<%- buy_url %>"  title="去看看" target="_blank" class="direct_link">去看看 &gt;</a>
     <% } %>
 
-<script type="text/javascript">
-var uyan_config = {
-             'du':'qicaidang.cn', 
-             'su':'<%- objectId %>'
-};
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: document.location.href, 
+    sourceId: "",
+    productKey: "218fd850b0f040298d0b0f279babbfda",
+    target: "cloud-tie-wrapper"
+  };
 </script>
-<!-- UJian Button BEGIN -->
-<div class="ujian-hook"></div>
-<script type="text/javascript">var ujian_config = {num:3,showType:15};</script>
-<script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?uid=2108457"></script>
-<!-- UJian Button END -->
-<!-- UY BEGIN -->
-<div id="uyan_frame"></div>
-<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2108457"></script>
-<!-- UY END -->
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
 
 </article>
 <!--content_show end-->
